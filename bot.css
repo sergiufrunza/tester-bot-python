@@ -1,0 +1,85 @@
+body
+{
+	background: #131518;
+}
+.select_mode{
+	display: flex;
+	justify-content: space-between;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 100px;
+	height: 50px;
+	width: 70%;
+
+}
+.live{
+	height: 50px;
+	width: 100px;
+	padding: auto;
+	background: #2aa935;
+	border: none;
+	border-radius: 5px;
+	color: #FFFFFF;
+}
+.preventive{
+	height: 50px;
+	width: 100px;
+	padding: auto;
+	background: #2aa935;
+	border: none;
+	border-radius: 5px;
+	color: #FFFFFF;
+}
+.active{
+	background: #dc3545;
+	height: 50px;
+	width: 100px;
+	padding: auto;
+	border: none;
+	border-radius: 5px;
+	color: #FFFFFF;
+}
+.loc_buton_start{
+	position: relative;
+	margin-top: 100px;
+	width: 100%;
+
+
+
+}
+
+.active_start{
+
+}
+
+
+
+.start{
+	display: block;
+	height: 50px;
+	width: 200px;
+	padding: auto;
+	color: #FFFFFF;
+	background:#2a2f34 ;
+	border: none;
+	border-radius: 5px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.loc_buton_site{
+	position: relative;
+	margin-top: 100px;
+	width: 100%;
+}
+.open{
+	display: block;
+	height: 30px;
+	width: 100px;
+	padding: auto;
+	color: #FFFFFF;
+	background:#2a2f34;
+	border: none;
+	border-radius: 5px;
+	margin-left: 300px;
+
+}

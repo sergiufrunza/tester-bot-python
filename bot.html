@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>bot</title>
+	<link rel='stylesheet' href='bot.css'>
+	<script type="text/javascript" src="/eel.js"></script>
+
+</head>
+<body>
+		<div class="select_mode">	
+			<div class="select_left"> <button class = "live">LIVE</button></div>
+			<div class="select_right"><button class = "preventive">	PREV </button></div>
+		</div>
+		<div class="loc_buton_site"><button class="open">open site</button>	</div>
+		<div class="loc_buton_start"><button class="start">START</button>	</div>
+
+
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"  type="text/javascript"></script>
+
+	<script type="text/javascript"> 
+
+
+	let prev = $(".preventive");
+	let live = $(".live");
+	let start = $(".start");
+	let open = $(".open");
+	let start1 = false
+	let time 
+
+ 
+
+
+$(document).ready(function(){
+		
+
+		start.click(function(){
+			if (((prev.hasClass('active') || live.hasClass('active'))) && (open.hasClass('active_start')))
+			{
+				if (!start.hasClass('active_start')){
+					start.toggleClass('active_start');
+					start.css ('background','#dc3545') ;
+					start.html('PAUSE');
+					start1 = true
+					time = setInterval(function (){
+						if (start1) eel.click_tiket(); else clearInterval(time); },20000);
+				}
+				else{
+					start.toggleClass('active_start');
+					start.css ('background','#2a2f34') ;
+					start.html('START');
+					start1 = false
+					clearInterval(time)
+
+				}
+
+			}
+	});
+
+
+
+		live.click(function(){
+			if (!prev.hasClass('active')){
+				live.toggleClass("active");
+				eel.cek_select("0");
+			}
+	});
+open.click(function(){
+				if(!open.hasClass('active_start')){
+					open.css ('background','#29a935') ;
+					open.toggleClass("active_start");
+					eel.betgold_auth('http://betgold.me/#/sports');
+
+				}
+				else{
+					eel.off_bot("1");
+					open.css ('background','#2a2f34') ;
+					open.toggleClass("active_start");
+
+				}
+			
+	});
+		prev.click(function(){
+			if (!live.hasClass('active'))
+				prev.toggleClass("active");
+			eel.cek_select("1");
+	});
+
+});
+
+
+
+
+
+
+		
+		
+
+
+
+	 </script>
+	
+</body>
+</html>
